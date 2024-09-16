@@ -7,6 +7,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 export const routes: Routes = [
     {path:"", component: LandingComponent},
@@ -16,5 +17,7 @@ export const routes: Routes = [
     {path: "about", component: AboutComponent},
     {path: "gallery", component: GalleryComponent},
     {path: "settings", component: SettingsComponent},
-    {path: "contact", component: ContactComponent}
+    {path: "contact", component: ContactComponent},
+    {path: "**", redirectTo: "login"},
+    {path: "**", component: ErrorComponent}
 ];

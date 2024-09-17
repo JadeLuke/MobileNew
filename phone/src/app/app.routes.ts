@@ -8,12 +8,14 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { CompanyComponent } from './pages/company/company.component';
 
 export const routes: Routes = [
     {path:"", component: LandingComponent},
     {path: "login", component: LoginComponent},
     {path: "register", component: SignUpComponent},
     {path: "dashboard", component: DashboardComponent},
+    {path: "dashboard", children: [{path: "company", component: CompanyComponent}]},
     {path: "about", component: AboutComponent},
     {path: "gallery", component: GalleryComponent},
     {path: "settings", component: SettingsComponent},
